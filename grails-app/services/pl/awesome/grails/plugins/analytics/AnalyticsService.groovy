@@ -23,8 +23,6 @@ class AnalyticsService {
         queue.addAll(gaq)
         queue << createTrackPageViewElement()
 
-        log.debug("fullQueue: $queue")
-
         return queue
     }
 

@@ -15,9 +15,7 @@ class AnalyticsTagLib {
     }
 
     def trackCode = { attrs, body ->
-        log.debug("1")
         if (!analyticsService.isEnabled()){
-            log.debug("2")
             return
         }
         
