@@ -12,8 +12,8 @@ class AnalyticsGrailsPlugin {
 
     // TODO Fill in these fields
     def title = "Analytics Plugin" // Headline display name of the plugin
-    def author = "Your name"
-    def authorEmail = ""
+    def author = "Mateusz Brzeziński"
+    def authorEmail = "brzezi@gmail.com"
     def description = '''\
 Brief summary/description of the plugin.
 '''
