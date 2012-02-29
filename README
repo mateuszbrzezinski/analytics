@@ -1,1 +1,23 @@
 Grails plugin for Google Analytics integration
+
+Configuration Config.groovy:
+analytics.enabled = true //true/false, optional, default true
+analytics.account = 'XXXXXXXXX' //analytics page account
+
+Usage:
+def analyticsService // inject service in Controller/other Service
+
+[...]
+
+analyticsService.trackEvent('Category', 'Action', 'Label', 'Value')
+analyticsService.setCustomVar(index, 'Name', 'Value', scope)
+analyticsService.setTrackedPage('/some/page') // override default (empty) page for next page view
+
+
+
+Just before </head> add:
+<analytics:trackCode/>
+
+
+You can override tracked page(have to be before trackCode tag):
+<analytics:setTrackedPage page="/some/page" />
